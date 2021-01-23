@@ -8,8 +8,6 @@ export default class Login extends Component {
                 <h1>Login</h1>
                 <Link to="/">Home</Link>
             </div>
-
-
         );
     }
 }
