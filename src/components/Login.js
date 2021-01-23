@@ -14,7 +14,7 @@ import {
 } from 'reactstrap';
 
 const Login = () => {
-    useClass('page-login');
+    useClass('bg-blue');
 
     const handleLogin = () => {
         console.log('login')
