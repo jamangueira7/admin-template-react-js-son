@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import useClass from './../hooks/add-class-body';
 import {
@@ -28,7 +28,9 @@ const Login = () => {
                          <CardBody>
                              <Form>
                                  <h1>Login</h1>
-                                 <p>Entre com e-mail e senha para acessar</p>
+                                 <p>
+                                     Entre com e-mail e senha para acessar. Novo? <Link to="register">Registrar-se</Link>
+                                 </p>
                                  <InputGroup className="mb-3">
                                      <Input type="email" placeholder="Email"></Input>
                                  </InputGroup>
@@ -37,6 +39,11 @@ const Login = () => {
                                  </InputGroup>
                                  <InputGroup>
                                      <Button color="primary" onClick={handleLogin}>Go!</Button>
+                                 </InputGroup>
+                                 <InputGroup>
+                                     <Link to="forgot">
+                                         <Button color="link">Recuperar senha?</Button>
+                                     </Link>
                                  </InputGroup>
                              </Form>
                          </CardBody>
