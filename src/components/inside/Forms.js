@@ -1,4 +1,5 @@
 import React from 'react';
+import { useForm } from 'react-hook-form';
 import {
     Row,
     Col,
@@ -13,6 +14,11 @@ import {
 } from 'reactstrap';
 
 export default function Forms () {
+    const { handleSubmit, watch, errors, register } = useForm();
+
+    function onSubmit(data) {
+        console.log(data);
+    }
     return (
         <div>
             <Row>
@@ -22,10 +28,16 @@ export default function Forms () {
                             <h4>Form</h4>
                         </CardHeader>
                         <CardBody>
-                            <form onSubmit={() => {}}>
+                            <form onSubmit={handleSubmit(onSubmit)}>
                                 <FormGroup>
                                     <Label for="name">Name:</Label>
-                                    <Input type="text" placeholder="Digite o seu nome..." />
+                                    <Input
+                                        type="text"
+                                        name="name"
+                                        placeholder="Digite o seu nome..."
+                                        innerRef={register({ required: true })}
+                                    />
+                                    {errors.name && <span className="text-danger">É obrigatório</span>}
                                 </FormGroup>
                                 <FormGroup>
                                     <Button>Enviar</Button>
