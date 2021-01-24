@@ -11,19 +11,17 @@ export default class AppLayout extends Component {
                 <Sidebar />
                 <div id="content-wrapper">
                     <Header />
-                    <Switch>
-                        { Templates.map((route, index) => (
-                            <div className="content-dynamic">
-                                <Route
-                                    key={index}
-                                    path={route.path}
-                                    exact={true}
-                                    render={ props => <route.template { ...props } /> }
-                                />
-                            </div>
-                        ))}
+                    { Templates.map((route, index) => (
 
-                    </Switch>
+                        <div className="content-dynamic">
+                            <Route
+                                key={index}
+                                path={route.path}
+                                exact
+                                render={ props => <route.template { ...props } /> }
+                            />
+                        </div>
+                    ))}
                 </div>
             </div>
         );
