@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useToasts } from 'react-toast-notifications';
 import {
     Row,
     Col,
@@ -15,9 +16,11 @@ import {
 
 export default function Forms () {
     const { handleSubmit, watch, errors, register } = useForm();
+    const { addToast } = useToasts();
 
     function onSubmit(data) {
         console.log(data);
+        addToast('Meu Toast', { appearance: 'success', autoDismiss: true,});
     }
     return (
         <div>

@@ -1,5 +1,6 @@
 import './styles/app.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { ToastProvider } from 'react-toast-notifications';
 
 import AppLayout from './containers/AppLayout';
 import Login from './components/Login';
@@ -11,11 +12,13 @@ export default function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/login" name="Login" render={ props => <Login {...props} /> } />
-          <Route exact path="/forgot" name="Forgot" render={ props => <Forgot {...props} /> } />
-          <Route exact path="/register" name="Register" render={ props => <Register {...props} /> } />
-          <Route path="/" name="Home" render={ props => <AppLayout {...props} /> } />
-          <Route  path="*" name="NotFound" render={ props => <NotFound {...props} /> } />
+          <ToastProvider>
+              <Route exact path="/login" name="Login" render={ props => <Login {...props} /> } />
+              <Route exact path="/forgot" name="Forgot" render={ props => <Forgot {...props} /> } />
+              <Route exact path="/register" name="Register" render={ props => <Register {...props} /> } />
+              <Route path="/" name="Home" render={ props => <AppLayout {...props} /> } />
+              <Route  path="*" name="NotFound" render={ props => <NotFound {...props} /> } />
+          </ToastProvider>
       </Switch>
     </BrowserRouter>
   );
