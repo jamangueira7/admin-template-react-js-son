@@ -16,7 +16,7 @@ import {
 const Register = () => {
     useClass('bg-blue');
 
-    const handleLogin = () => {
+    const handleCreate = () => {
         console.log('login')
     }
     return (
@@ -27,10 +27,13 @@ const Register = () => {
                        <Card>
                          <CardBody>
                              <Form>
-                                 <h1>Login</h1>
+                                 <h1>Cadastrar</h1>
                                  <p>
-                                     Entre com e-mail e senha para acessar. Novo? <Link to="register">Registrar-se</Link>
+                                     Entre com nome, e-mail e senha para criar uma conta.<Link to="login">Login</Link>
                                  </p>
+                                 <InputGroup className="mb-3">
+                                     <Input type="text" placeholder="Nome"></Input>
+                                 </InputGroup>
                                  <InputGroup className="mb-3">
                                      <Input type="email" placeholder="Email"></Input>
                                  </InputGroup>
@@ -38,7 +41,7 @@ const Register = () => {
                                      <Input type="password" placeholder="Senha"></Input>
                                  </InputGroup>
                                  <InputGroup>
-                                     <Button color="primary" onClick={handleLogin}>Go!</Button>
+                                     <Button color="primary" onClick={handleCreate}>Criar!</Button>
                                  </InputGroup>
                                  <InputGroup>
                                      <Link to="forgot">
