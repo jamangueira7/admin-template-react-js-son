@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Templates from './../containers/routes';
 
 export default function Sidebar(props) {
+    useEffect(() => {
+        document.getElementById('main-wrapper').classList.toggle('toggled');
+        return () => {
+            document.getElementById('main-wrapper').classList.remove('toggled');
+        }
+    },[]);
+
     return (
         <aside id="sidebar">
             <div className="sidebar-title">
