@@ -1,7 +1,7 @@
 import './styles/app.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Home from './components/Home';
+import AppLayout from './containers/AppLayout';
 import Login from './components/Login';
 import Forgot from './components/Forgot';
 import Register from './components/Register';
@@ -11,21 +11,11 @@ export default function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/">
-            <Home />
-        </Route>
-        <Route exact path="/login">
-            <Login />
-        </Route>
-        <Route exact path="/forgot">
-          <Forgot />
-        </Route>
-        <Route exact path="/register">
-          <Register />
-        </Route>
-        <Route path="*">
-          <NotFound />
-        </Route>
+        <Route exact path="/" name="Home" render={ props => <AppLayout {...props} /> } />
+        <Route exact path="/login" name="Login" render={ props => <Login {...props} /> } />
+        <Route exact path="/forgot" name="Forgot" render={ props => <Forgot {...props} /> } />
+        <Route exact path="/register" name="Register" render={ props => <Register {...props} /> } />
+        <Route  path="*" name="NotFound" render={ props => <NotFound {...props} /> } />
       </Switch>
     </BrowserRouter>
   );

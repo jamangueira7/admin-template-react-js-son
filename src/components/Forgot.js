@@ -14,7 +14,7 @@ import {
 } from 'reactstrap';
 import {Link} from "react-router-dom";
 
-const Forgot = () => {
+const Forgot = (props) => {
     useClass('bg-blue');
 
     const handleSendEmail = () => {
