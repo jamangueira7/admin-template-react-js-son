@@ -1,10 +1,11 @@
+import Component1 from './../components/Component1';
 
-const LoadingRoutes = () => (
+const LoadingRoutes = () => ([
      {
        path: "/1",
-       name: "Home",
-       template: "home",
+       name: "Component 1",
+       template: Component1
     }
-)
+]);
 
 export default LoadingRoutes();
