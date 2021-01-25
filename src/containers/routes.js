@@ -2,6 +2,7 @@ import Cards from '../components/inside/Cards';
 import Forms from '../components/inside/Forms';
 import Charts from '../components/inside/Charts';
 import Dashboard from '../components/inside/Dashboard';
+import DataTables from '../components/inside/DataTables';
 
 const LoadingRoutes = () => ([
      {
@@ -23,6 +24,11 @@ const LoadingRoutes = () => ([
         path: "/charts",
         name: "Charts",
         template: Charts
+    },
+    {
+        path: "/dataTables",
+        name: "DataTables",
+        template: DataTables
     }
 ]);
 

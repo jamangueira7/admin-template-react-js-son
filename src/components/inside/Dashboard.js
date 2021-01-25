@@ -5,8 +5,7 @@ import {
     Card,
     CardHeader,
     CardBody,
-    CardFooter,
-    Collapse
+    CardFooter
 } from 'reactstrap';
 
 export default function Dashboard () {
