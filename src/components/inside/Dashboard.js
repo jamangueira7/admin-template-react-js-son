@@ -1,28 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
     Row,
     Col,
     Card,
     CardHeader,
-    CardBody,
-    CardFooter
+    CardBody
 } from 'reactstrap';
 
 export default function Dashboard () {
     return (
         <div>
             <Row>
-                <Col xs="12" sm="6" md="4">
+                <Col xs="12" sm="12" md="12">
                     <Card>
                         <CardHeader>
-                            <h4>Card Title</h4>
+                            <h4>Dashboard</h4>
                         </CardHeader>
                         <CardBody>
-                            Text
+                            Texto da Dashboard
                         </CardBody>
-                        <CardFooter>
-                            Footer
-                        </CardFooter>
                     </Card>
                 </Col>
             </Row>

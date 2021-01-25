@@ -1,5 +1,4 @@
 import React from 'react';
-//import { Link } from 'react-router-dom';
 import useClass from './../hooks/add-class-body';
 import {
     Container,
