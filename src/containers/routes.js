@@ -1,5 +1,6 @@
 import Cards from '../components/inside/Cards';
 import Forms from '../components/inside/Forms';
+import Charts from '../components/inside/Charts';
 
 const LoadingRoutes = () => ([
      {
@@ -11,6 +12,11 @@ const LoadingRoutes = () => ([
         path: "/forms",
         name: "Forms",
         template: Forms
+    },
+    {
+        path: "/charts",
+        name: "Charts",
+        template: Charts
     }
 ]);
 
