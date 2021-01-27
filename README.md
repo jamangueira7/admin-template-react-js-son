@@ -20,10 +20,10 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Template com React JS. O layout é divido em rotas externas e internas com visual diferente. 
-Projeto pratico da School of net - Criando um admin template com React.js[Link](https://www.schoolofnet.com/projeto-pratico/frontend/react/criando-um-admin-template-com-reactjs)
+Template com React JS. O layout é divido em rotas externas e internas com visuais diferentes. 
+Projeto pratico da School of net - Criando um admin template com React.js [Link](https://www.schoolofnet.com/projeto-pratico/frontend/react/criando-um-admin-template-com-reactjs).
 
-## 💻 Rotas e Páginas
+## 🚀 Rotas e Páginas
 
 - Dashboard
 Rota: /dashboard
